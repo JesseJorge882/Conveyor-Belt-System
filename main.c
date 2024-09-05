@@ -44,8 +44,8 @@ int Sensor4 = 0;
 // Sorting Gates
 int state;
 int state2;
-char symbol[2] = {'/','|'};
-char symbol2[2] = {'/','|'};
+char symbol[2] = {'//','|'};
+char symbol2[2] = {'\\','|'};
 int Gate = 0;
 int control = 0;
 int control2 = 0;
@@ -122,7 +122,7 @@ void *ConveyorBelt(void)
 
             if (GateCount2 < 18)
             {
-                printf("\nGate (Conveyor 2): OPEN     /");
+                printf("\nGate (Conveyor 2): OPEN     \\");
             }
             else
             {
@@ -137,7 +137,7 @@ void *ConveyorBelt(void)
             }
             printf("\n                          |  |                            %c                         |               \n", symbol[a]);
             printf("                          S1 S2                           SG                        CS              \n");
-            printf("                          |  |                            %c                         |               \n", symbol[b]);
+            printf("                          |  |                            %c                         |               \n", symbol2[b]);
             for (list2 = 0; list2 < 100; list2++)
             {
                 printf("%d", Conveyor2 [list2]);
